@@ -19,14 +19,20 @@ export interface GoldPriceResponse {
   source: string;
 }
 
-// ===== Biểu đồ giá vàng =====
-export interface GoldChartPoint {
-  /** Ngày (dd/MM) */
+// ===== Lịch sử giá vàng =====
+export interface GoldHistoryPoint {
+  /** Ngày (ISO string) */
   date: string;
-  /** Giá mua (triệu đồng) */
+  /** Giá mua (triệu đồng/lượng) */
   buy: number;
-  /** Giá bán (triệu đồng) */
+  /** Giá bán (triệu đồng/lượng) */
   sell: number;
+}
+
+export interface GoldHistoryResponse {
+  data: GoldHistoryPoint[];
+  source: string;
+  updatedAt: string;
 }
 
 // ===== Tin tức =====

@@ -48,17 +48,27 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Cột 3: Liên kết */}
+          {/* Cột 3: Danh mục */}
           <div>
             <h3 className="font-semibold mb-3">Danh mục</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#gia-vang" className="hover:text-foreground transition-colors">
+                <a href="/" className="hover:text-foreground transition-colors">
                   Giá vàng hôm nay
                 </a>
               </li>
               <li>
-                <a href="#tin-tuc" className="hover:text-foreground transition-colors">
+                <a href="/ty-gia" className="hover:text-foreground transition-colors">
+                  Tỷ giá ngoại tệ
+                </a>
+              </li>
+              <li>
+                <a href="/chung-khoan" className="hover:text-foreground transition-colors">
+                  Chứng khoán Việt Nam
+                </a>
+              </li>
+              <li>
+                <a href="/tin-tuc" className="hover:text-foreground transition-colors">
                   Tin tức kinh tế
                 </a>
               </li>
