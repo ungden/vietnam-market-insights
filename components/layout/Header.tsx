@@ -1,7 +1,7 @@
 'use client';
 
 import { Moon, Sun, Globe, Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { GoldPriceResponse, MarketData } from '@/lib/types';
@@ -53,8 +53,13 @@ export function Header() {
   }, []);
 
   // Đóng mobile menu khi chuyển trang
+  // Dùng ref để tránh ESLint cảnh báo setState trong effect
+  const prevPathname = React.useRef(pathname);
   useEffect(() => {
-    setMobileMenuOpen(false);
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      queueMicrotask(() => setMobileMenuOpen(false));
+    }
   }, [pathname]);
 
   const sjcPrice = goldData?.prices?.find((p) => p.brand.includes('SJC'));

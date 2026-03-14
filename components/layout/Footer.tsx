@@ -1,6 +1,7 @@
 'use client';
 
 import { Globe } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -53,24 +54,24 @@ export function Footer() {
             <h3 className="font-semibold mb-3">Danh mục</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/" className="hover:text-foreground transition-colors">
+                <Link href="/" className="hover:text-foreground transition-colors">
                   Giá vàng hôm nay
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ty-gia" className="hover:text-foreground transition-colors">
+                <Link href="/ty-gia" className="hover:text-foreground transition-colors">
                   Tỷ giá ngoại tệ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/chung-khoan" className="hover:text-foreground transition-colors">
+                <Link href="/chung-khoan" className="hover:text-foreground transition-colors">
                   Chứng khoán Việt Nam
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/tin-tuc" className="hover:text-foreground transition-colors">
+                <Link href="/tin-tuc" className="hover:text-foreground transition-colors">
                   Tin tức kinh tế
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
